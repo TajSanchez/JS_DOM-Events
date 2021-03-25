@@ -17,13 +17,24 @@
             <h1>EXERCISE 1</h1>
             <h1 id="node1">Node #1</h1>
             <!-- Select Node #1 and change the text to: "I used the getElementById("node1") method to access this" -->
+            document.getElementById("node1").innertext = "I used the getElementById("node1")method to access this";
 
+           
             <h2 class="node2">Node #2</h2>
             <!-- Select Node #2 and change the text to: "I used the getElementByClassName("node2") method to access this" -->
-            <h3>Node #3</h3>
-            <h3>Node #4</h3>
-            <h3>Node #5</h3>
+            document.getElementById("node2")[0].innertext =
+            'I used the getElementById("node2")method to access this';
+
+            <h3>"I used the getElementByTagName("h3") method to access all of these" </h3>
+            <h3>"I used the getElementByTagName("h3") method to access all of these"</h3>
+            <h3>"I used the getElementByTagName("h3") method to access all of these"</h3>
+            
             <!-- Select ALL the h3 tags and change the text to: "I used the getElementByTagName("h3") method to access all of these" -->
+            const h3Nodes = documnet.getElementByTagName("h3");
+            for (let node of h3Nodes) {
+                node.innerText =
+                "I used the getElementByTagName("h3")" method to access all of these";
+            }
 
         </div>
 
@@ -33,10 +44,17 @@
             <div id="parent">
             </div>
             <!-- TODO: Create a <p> using this element.createElement() and put this text inside "I am a <p> tag" -->
-            <!-- TODO: Append the created node to the parent node using the element.appendChild() method-->
+                const p = element.createElement("p");
+                 p.innerText = "I am a p element";   
+             <!--TODO: Append the created node to the parent node using the element.appendChild() method-->
+            const parent = document.getElementById("parent");
+            parent.appendChild(p);
 
             <!-- TODO: Create a <a> using this element.createElement() and put this text inside "Visit me" -->
+                const a = element.createElement("Visit me");
             <!-- TODO: Insert the created <a> after the parent but before the one you just created using the element.insertBefore() method-->
+                a.innerText = "Visit me";
+                parent.insertBefore(a,p);
         </div>
 
         <!-- Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS -->

@@ -16,7 +16,7 @@ body {
 
 /*--------------- EXERCISE 1 STYLES ---------------- */
 .exercise1 {
-  text-align: center;
+  text-align: center; 
   margin: 5px;
   border-radius: 25px;
   border: 2px solid #bfbfbf;
